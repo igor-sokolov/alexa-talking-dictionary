@@ -1,0 +1,45 @@
+welcome1: Welcome to Free Talking dictionary. What word would you like to inquire?
+welcome2: Welcome to Free Talking dictionary. What word are you intresting in?
+welcome3: Welcome to Free Talking dictionary. What word would you like me explain you?
+
+word_found: |
+  <speak>
+    <s>I found a word <break strength="medium"/>{{word}}.</s>
+    <s>The first definition as a {{part_of_speech}} is following.</s>
+    <p>{{definition}}</p>
+  </speak>
+
+word_not_found: I'm sorry, I can't find a word {{word}}
+
+word_not_selected: Sorry. You should first select a word.
+
+word_summary: |
+  <speak>
+    <s>
+    {% if number_of_defitions == 1%}
+      There is <say-as interpret-as="cardinal">{{number_of_defitions}}</say-as> definition
+    {% else %}
+      There are <say-as interpret-as="cardinal">{{number_of_defitions}}</say-as> definitions
+    {% endif %}
+    {% for w in available_parts_of_speech %}
+      {% if not loop.first %}
+        {% if loop.last %}
+          <break strength="medium"/> and
+        {% else %}
+          <break strength="medium"/>,
+        {% endif %}
+      {% endif %}
+       as a {{w}}
+    {% endfor %}
+    </s>
+  </speak>
+
+all_definitions: |
+  <speak>
+    <p>All definitions as a {{part_of_speech}} are following</p>
+    {% for d in definitions %}
+      <p><say-as interpret-as="ordinal">{{loop.index}}</say-as> definition.<break strength="strong"/> {{d}}</p>
+    {% endfor %}
+  </speak>
+
+part_of_speech_not_found: Sorry. I cannot find any defitions for this part of speach.

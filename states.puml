@@ -1,0 +1,24 @@
+@startuml
+start
+:WordSearchIntent;
+if (Word found) then (yes)
+    :render template: word_found;
+    repeat
+    split
+    :SummaryIntent;
+    :render template: word_summary;
+    split again
+    :RepeatIntent;
+    :display last message from session;
+    split again
+    :AllDefinitionsIntent;
+    :render template: all_definitions;
+    end split
+    repeat while
+else (no)
+  :display message: word_not_found;
+endif
+
+stop
+
+@enduml

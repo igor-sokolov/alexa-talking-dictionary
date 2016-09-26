@@ -1,0 +1,7 @@
+{
+    "dev": {
+        "s3_bucket": "sis-bucket",
+        "app_function": "app.app"
+    }
+}
+

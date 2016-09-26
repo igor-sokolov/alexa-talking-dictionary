@@ -1,0 +1,30 @@
+{
+  "intents": [
+    {
+      "intent": "WordSearchIntent",
+      "slots": [
+        {
+          "name": "word",
+          "type": "A_WORD"
+        }
+      ]
+    },
+    {
+      "intent": "SummaryIntent",
+      "slots": []
+    },
+    {
+      "intent": "RepeatIntent",
+      "slots": []
+    },
+     {
+      "intent": "AllDefinitionsIntent",
+      "slots": [
+        {
+          "name": "part_of_speech",
+          "type": "PART_OF_SPEECH"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+WordSearchIntent Explain {word}
+WordSearchIntent Explain me {word}
+WordSearchIntent Explain me {word}
+WordSearchIntent Tell me about {word}
+WordSearchIntent Tell me about {word}
+WordSearchIntent What is the definition of {word}
+WordSearchIntent What does {word} means
+WordSearchIntent What mean {word}
+WordSearchIntent Say definition of {word}
+SummaryIntent Summary
+SummaryIntent Summary about the current word
+SummaryIntent Please sum up
+RepeatIntent Repeat
+RepeatIntent Repeat that
+RepeatIntent Say it again
+AllDefinitionsIntent All definitions {part_of_speech}
+AllDefinitionsIntent All definitions as a {part_of_speech}
+AllDefinitionsIntent Say all definitions as a {part_of_speech}
